@@ -1,0 +1,3 @@
+#add the repo names here to migrate from bitbucket to github
+repoA
+repoB
