@@ -9,9 +9,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: script
         run: | 
-            env
+            
             # make file runnable, might not be necessary
-             chmod +x "${GITHUB_WORKSPACE}/migrate.sh"
+             chmod +x "${GITHUB_WORKSPACE}/Migrate-repo/migrate.sh"
               # run script
-             "${GITHUB_WORKSPACE}/migrate.sh"
+             "${GITHUB_WORKSPACE}/Migrate-repo/migrate.sh"
         shell: bash
