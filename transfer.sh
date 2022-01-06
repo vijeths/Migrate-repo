@@ -6,6 +6,7 @@ for repo in $repos; do
   echo "* Processing $repo..."
   echo
   git clone --bare git@bitbucket.org:$BITBUCKET_ORG/$repo.git 
+  run: env
   cd $repo.git
   echo
   echo "* $repo cloned, now creating on github..."  
