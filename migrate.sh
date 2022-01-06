@@ -15,7 +15,7 @@ test -z $existin_repo_name && echo "An existing repo name is required." 1>&2 && 
 ##    MOVE IT     ##
 ####################
 # create new git rep
-curl -u "${username}:${password}" https://api.github.com/user/repos -d "{\"name\":\"$existin_repo_name\", \"private\":\"true\" , \"description\":\"Private Repo for ${username} Project - ${existin_repo_name}\" }"
+curl -u "${secrets.GIT_USERNAME}:${secrets.GIT_PASSWORD}" https://api.github.com/user/repos -d "{\"name\":\"$existin_repo_name\", \"private\":\"true\" , \"description\":\"Private Repo for ${username} Project - ${existin_repo_name}\" }"
 echo "CREATED NEW GITHUB REPO"
 echo "https://github.com/${username}/${existin_repo_name}"
 
