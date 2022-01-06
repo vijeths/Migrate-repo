@@ -8,5 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: script
-        run: migrate.sh
+        run: | 
+            env
+            # make file runnable, might not be necessary
+             chmod +x "${Migrate-repo}/.github/migrate.sh"
+              # run script
+             "${Migrate-repo}/.github/migrate.sh"
         shell: bash
