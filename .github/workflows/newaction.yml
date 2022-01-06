@@ -3,10 +3,10 @@ name: run-script
 on: push
 
 jobs:
-run:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v1
-- name: script
-run: Migrate-repo/migrate.sh
-shell: bash
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: script
+        run: migrate.sh
+        shell: bash
