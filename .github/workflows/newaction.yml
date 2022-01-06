@@ -11,7 +11,7 @@ jobs:
         run: | 
             
             # make file runnable, might not be necessary
-             chmod +x "${GITHUB_WORKSPACE}/Migrate-repo/migrate.sh"
+             chmod +x "${GITHUB_WORKSPACE}/.github/migrate1.sh"
               # run script
-             "${GITHUB_WORKSPACE}/Migrate-repo/migrate.sh"
+             "${GITHUB_WORKSPACE}/.github/migrate1.sh"
         shell: bash
