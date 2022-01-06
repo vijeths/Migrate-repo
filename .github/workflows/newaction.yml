@@ -1,3 +1,4 @@
+#running shel script
 name: run-script
 on: push
 
