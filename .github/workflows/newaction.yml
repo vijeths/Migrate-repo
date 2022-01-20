@@ -1,17 +1,22 @@
-#running shel script
-name: run-script
-on: push
+#running shell script with github workflow
+name: Check for push
+on:
+  push:
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      
       - name: script
-        run: | 
-            
-            # make file runnable, might not be necessary
-             chmod +x "${GITHUB_WORKSPACE}/.github/migrate1.sh"
-              # run script
-             "${GITHUB_WORKSPACE}/.github/migrate1.sh"
+        run: sh ./list_repo.sh
+        
+      - name: printing few lines
+        run: |
+          echo Here is the list
+          ls -a
+        
+        
         shell: bash
